@@ -22,8 +22,6 @@ public class UserDetailService implements UserDetailsService{
 	@Autowired
 	private UserRepository repository;
 	
-	@Autowired
-	private PasswordEncoder encoder;
 	
 
 	@Override
@@ -33,16 +31,5 @@ public class UserDetailService implements UserDetailsService{
 		return user.map(UserInfoDetails::new)
 				.orElseThrow(() -> new UsernameNotFoundException("User not found " + username));
 	}
-	
-	
-	public Boolean Register(User user) {
-		user.setPassword(encoder.encode(user.getPassword()));
-		if(repository.save(user) != null) {
-			return true;
-		}
-		
-		return false;
-	}
-	
 	
 }

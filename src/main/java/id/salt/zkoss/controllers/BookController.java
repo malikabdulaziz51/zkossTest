@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import jakarta.annotation.Resource;
+import jakarta.servlet.http.HttpServletResponse;
 
 @Controller
 @RequestMapping("/auth")
@@ -18,5 +19,10 @@ public class BookController {
 	
 	
 	
-	
+	@GetMapping("/book")
+	public String ShowBook()
+	{
+		
+		return "bookList";
+	}
 }

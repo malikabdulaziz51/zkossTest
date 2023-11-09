@@ -60,8 +60,7 @@ public class BookListComponent extends SelectorComposer<Component> {
 	}
 	
 	private void GetUser() {
-//		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-//		User user = (User)auth.getPrincipal();
-//		labelUser.setValue(null);
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		labelUser.setValue(auth.getName());
 	}
 }

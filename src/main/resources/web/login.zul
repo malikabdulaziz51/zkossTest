@@ -1,24 +1,27 @@
-<?link rel="stylesheet" type="text/css" href="/style.css"?>
-<zk>
-	<window title="Insert New Product" border="normal"
-		apply="id.salt.zkoss.zulController.LoginComponent">
-			<grid>
-				<rows>
-					<row>
-						Username:
-						<textbox id="userName" constraint="no empty"/>
-					</row>
-					<row>
-						Password:
-						<textbox id="userPassword" type="password"
-							 constraint="no empty"/>
-					</row>
-					<row spans="2">
-						<hbox>
-							<button type="submit" id="btnLogin" label="Login" />
-						</hbox>
-					</row>
-				</rows>
-			</grid>
-	</window>
+<?page title="Login Page" contentType="text/html;charset=UTF-8"?>
+<zk xmlns:n="native">
+    <n:form action="/login" method="POST">
+        <grid width="450px" style="margin:auto">
+            <columns>
+                <column width="160px" />
+                <column width="280px" />
+            </columns>
+            <rows>
+                <row spans="2" align="center">
+                    <label value="LOGIN"/>
+                </row>
+                <row>
+                    <label value="User :"/>
+                    <textbox name="username" value="user"/></row>
+                <row>
+                    <label value="Password :"/>
+                    <textbox type="password" name="password" value="password"/> </row>
+                <row spans="2" align="right">
+                    <hlayout>
+                    <button type="reset" label="Reset" /> <button type="submit" label="Login" />
+                    </hlayout>
+                </row>
+            </rows>
+        </grid>
+    </n:form>
 </zk>

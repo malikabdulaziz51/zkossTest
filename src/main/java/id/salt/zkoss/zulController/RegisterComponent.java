@@ -11,6 +11,7 @@ import org.zkoss.zk.ui.select.annotation.WireVariable;
 import org.zkoss.zul.Textbox;
 
 import id.salt.zkoss.models.User;
+import id.salt.zkoss.services.RegisterService;
 import id.salt.zkoss.services.UserDetailService;
 
 @VariableResolver(org.zkoss.zkplus.spring.DelegatingVariableResolver.class)
@@ -30,8 +31,8 @@ public class RegisterComponent extends SelectorComposer<Component>{
 	@Wire
 	Textbox roles;
 	
-	@WireVariable("userInfoService")
-	private UserDetailService service;
+	@WireVariable("registerService")
+	private RegisterService service;
 	
 	
 	@Listen("onClick = #btnRegister; onOk = window")

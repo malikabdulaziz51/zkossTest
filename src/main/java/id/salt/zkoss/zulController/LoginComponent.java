@@ -35,11 +35,6 @@ public class LoginComponent extends SelectorComposer<Component> {
 		var user = new Login();
 		user.setUsername(userName.getValue());
 		user.setPassword(userPassword.getValue());
-		var token = service.Login(user);
-		if(service.IsValidToken(token, user.getUsername())) {			
-			Executions.sendRedirect("/auth/book");
-		}else {
-			alert("Login Failed!!!");
-		}
+		service.Login(user);
 	}
 }

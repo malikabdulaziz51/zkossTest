@@ -1,0 +1,8 @@
+<?page title="Ini Zull" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title="Ini Zull" border="normal" apply="id.salt.zkoss.zulController.IndexComponent">
+New Content Here!
+<textbox id="txtBox"/>
+<button label="click" id="btnAlert" />
+</window>
+</zk>

@@ -1,0 +1,30 @@
+<?page title="Register New User" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title="Insert New Product" border="normal" apply="id.salt.zkoss.zulController.RegisterComponent">
+<grid>
+		<columns>
+			<column label="Fill the blank"/>
+			<column label=""/>
+		</columns>
+		<rows>
+			<row>	
+			Name 
+			<textbox id="userName" constraint="no empty"/>
+			</row>
+			<row>	
+			Email
+			<textbox id="userEmail" constraint="no empty"/>
+			</row>
+			<row>	
+			Password
+			<textbox id="userPassword" type="password" constraint="no empty"/>
+			</row>
+			<row>	
+			Roles
+			<textbox id="roles" constraint="no empty"/>
+			</row>
+		</rows>
+	</grid>
+    <button label="Register" id="btnRegister"/>
+</window>
+</zk>

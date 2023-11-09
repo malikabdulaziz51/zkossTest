@@ -1,0 +1,27 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title="new page title" border="normal" apply="id.salt.zkoss.zulController.BookListComponent">
+
+<label id="labelUser"/>
+<grid id="gridData">
+		<columns>
+			<column label="ID"/>
+			<column label="Book Title"/>
+			<column label="Description" />
+			<column label="Author"/>
+			<column label="Price"/>
+		</columns>
+
+		<template name="model">
+		<row>	
+			<label value="${each.id}" />
+			<label value="${each.title}" />
+			<label value="${each.description}" />
+			<label value="${each.author}" />
+			<label value="${each.price}" />
+		</row>
+		</template>
+		
+	</grid>
+</window>
+</zk>
